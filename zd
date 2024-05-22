@@ -1,0 +1,76 @@
+
+# 获取历史记录文件中的日期集合
+def get_history_date_time(history_data):
+
+    list_date_time = []
+
+    # 对历史记录文件进行遍历
+    for data in history_data:
+        date_time = data[5]
+
+        # 由于Chrome浏览器在sqlite中存储的时间是以1601-01-01 00:00:00 为起始时间点的微妙计数
+        # 与Unix时间戳存在时间间隔，所以需要转换
+        unix_time_samp = (date_time / 1000000) - 11644473600
+
+        # 中国以北京时间为准，北京时间为UTC+8小时，8小时=28800秒
+        unix_time_samp += 28800
+
+        # 放入list_date_time列表
+        list_date_time.append(unix_time_samp)
+
+
+    # 将时间转化为标准格式
+    for i in range(len(list_date_time)):
+        unix_time_samp = list_date_time[i]
+        list_date_time[i] = time.strftime("%Y-%m-%d", time.gmtime(unix_time_samp))
+
+    # 去重复，set表示集合，集合不可能存在重复元素
+    list_unique = list(set(list_date_time))
+
+    # 升序排序
+    list_unique_sort = sorted(list_unique)
+
+    # print(list_unique_sort)
+    return list_unique_sort
+
+
+
+
+
+# 绘制 某日不同时刻访问次数 散点图
+def plot_scatter_website_diff_time(date_time_value, history_data):
+
+    # 非法输入日期
+    if date_time_value is None:
+        return {}
+
+    # print(date_time_value)
+
+
+    # 频率字典
+    dict_data = {}
+    for i in range(0, 24):
+        dict_data[i] = 0
+
+    # 对历史记录文件进行遍历
+    for data in history_data:
+        date_time = data[5]
+
+        # 由于Chrome浏览器在sqlite中存储的时间是以1601-01-01 00:00:00 为起始时间点的微妙计数
+        # 与Unix时间戳存在时间间隔，所以需要转换
+        unix_time_samp = (date_time / 1000000) - 11644473600
+
+        # 中国以北京时间为准，北京时间为UTC+8小时，8小时=28800秒
+        unix_time_samp += 28800
+
+        # 获取今天日期
+        current_day = time.strftime("%Y-%m-%d", time.gmtime(unix_time_samp))
+
+        # 判断是否是今天
+        if(date_time_value == current_day):
+
+            key = time.strftime("%H", time.gmtime(unix_time_samp))
+            key = int(key)
+
+            if key in dict_data.keys():
+                dict_data[key] += 1
