@@ -1,0 +1,11 @@
+<script lang="ts">
+import { defineComponent } from 'vue';
+import sha1 from 'crypto-js/sha1';
+export default defineComponent({
+  name: 'Test',
+  setup() {
+    // sha1加密
+    console.log('sha1加密后', sha1('hello, my name is FuChaoyang'));
+  }
+});
+</script>
