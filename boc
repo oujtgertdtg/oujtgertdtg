@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="box">
+        <img src="https://gw.alicdn.com/bao/uploaded/i1/749716436/O1CN01OSPWqa1xPjeErSSzf_!!749716436-0-pixelsss.jpg">
+        <div class="introduce">人本春季红色帆布鞋男网红休闲布鞋潮鞋百搭运动小白鞋子男运动鞋</div>
+        <div class="price">¥78.3</div>
+    </div>
+</body>
+
+</html>
