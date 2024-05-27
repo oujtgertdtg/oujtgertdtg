@@ -1,0 +1,22 @@
+const express = require('express');
+const app = express();
+let message = "No new message";
+ 
+// 指定public文件夹是静态资源的目录
+app.use(express.static("public"));
+ 
+// 前端要轮询访问这个接口，这个接口会返回最新的message
+app.get('/poll', (req, res) => {
+  res.send(message);
+  message = "No new message";
+});
+ 
+// 在其他地方调用这个接口，更新message
+app.post('/update', (req, res) => {
+  message = "Here's a new message!";
+  res.status(200).send('Message updated');
+});
+ 
+app.listen(3000, () => {
+  console.log('Server running on port 3000');
+});
