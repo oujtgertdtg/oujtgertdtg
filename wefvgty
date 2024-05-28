@@ -1,0 +1,25 @@
+// 矩形
+ctx.fillRect(x, y, width, height);               // 填充矩形
+ctx.strokeRect(x, y, width, height);             // 描边矩形
+
+// 圆形或弧形
+ctx.beginPath();                                // 开始一条路径描述
+ctx.arc(x, y, radius, startAngle, endAngle);     // 绘制弧形或圆形
+ctx.closePath();                                // 关闭路径
+ctx.fill();                                     // 填充当前绘图（路径区域）
+ctx.stroke();                                   // 描边当前绘图（路径）
+
+// 多边形
+ctx.beginPath();                                // 开始一条路径描述
+ctx.moveTo(x1, y1);                             // 将绘图位置移动到 x1, y1
+ctx.lineTo(x2, y2);                             // 连接到 x2, y2
+// ...                                          // 更多的点连接
+ctx.closePath();                                // 关闭路径
+ctx.fill();                                     // 填充当前绘图（路径区域）
+ctx.stroke();                                   // 描边当前绘图（路径）
+
+// 文本
+ctx.font = '16px serif';                        // 设置字体
+ctx.fillStyle = '#000';                         // 设置字体颜色
+ctx.fillText(text, x, y);                       // 填充文本
+ctx.strokeText(text, x, y, maxWidth);           // 描边文本
