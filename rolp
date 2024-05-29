@@ -1,0 +1,6 @@
+// vue.config.js
+const { defineConfig } = require('@vue/cli-service');
+ 
+export default defineConfig({
+  // 这里放置你的配置选项
+});
