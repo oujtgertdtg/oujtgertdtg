@@ -1,0 +1,19 @@
+<template>
+    <VueUnity :unity="unityContext" width="800" height="600"></VueUnity>
+</template>
+
+<script setup>
+import UnityWebgl from 'unity-webgl';
+import VueUnity from 'unity-webgl/vue';
+
+const unityContext = new UnityWebgl({
+    loaderUrl: '/Unity/UnityVue.loader.js',
+    dataUrl: '/Unity/UnityVue.data.gz',
+    frameworkUrl: '/Unity/UnityVue.framework.js.gz',
+    codeUrl: '/Unity/UnityVue.wasm.gz',
+})
+
+unityContext.on('mounted',() => console.log('Unity加载完成...'))
+
+</script>
+
