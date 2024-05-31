@@ -1,0 +1,11 @@
+async initData(){
+   
+    const res = await addressFindOneApi(params.id)
+}
+ 
+​​​​​​​function addressFindOneApi(id) {
+  return $axios({
+    'url': `/addressBook/${id}`,
+    'method': 'get',
+  })
+}
