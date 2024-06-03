@@ -1,0 +1,8 @@
+    //当客户端的请求参数是日期的格式，那么就需要用到LocalDateTime类型来接收
+    @RequestMapping("/dateTimeParam")
+    //这里的注释:规定日期格式
+    //需要注意，方法中的参数名必须要跟请求参数的名保持一致
+    public String dateTimeParam(@DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss") LocalDateTime localDateTime){
+        System.out.println(localDateTime);
+        return "OK";
+    }
