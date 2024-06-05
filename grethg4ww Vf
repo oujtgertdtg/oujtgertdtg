@@ -1,0 +1,10 @@
+@Controller  
+@SessionAttributes("someAttribute")  
+public class MyController {  
+  
+    @GetMapping("/somePath")  
+    public String handleRequest(Model model, @ModelAttribute("someAttribute") SomeClass someAttribute) {  
+        // ... 处理请求 ...  
+        return "someView";  
+    }  
+}
