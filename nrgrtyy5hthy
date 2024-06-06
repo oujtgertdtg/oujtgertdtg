@@ -1,0 +1,30 @@
+@media (max-width: 480px){
+    .displayNone{
+        display: none} 
+    .navigation_bar p{
+        font-size: 30px;
+    }
+    .navigation_bar1 p{
+        font-size: 30px;
+    }
+    .category{
+        display: none;
+    }
+    .main{
+        display: inline-block;
+        width: 100%;
+        justify-content: space-around;
+        text-align: center;
+    }
+    .navigation_bar{
+        height: 20px;
+    }
+    .main1{
+        display: inline-block;
+        width:100% ;
+        justify-content: space-around;
+        text-align: center;
+    }
+} 
+ 
+  
