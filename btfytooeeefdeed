@@ -1,0 +1,31 @@
+<div class="footer">
+			<div class="container">
+				<div class="footer-liebiao">
+					<div class="guanyu">
+						<table>
+							<tr class="neir">
+								<td colspan="5"><h4>关于我们</h4></td>
+							</tr>
+							<tr>
+								<td><a href="#">关于我们</a></td>
+								<td><a href="#">联系我们</a></td>
+								<td><a href="#">在线反馈</a></td>
+								<td><a href="#">侵权投诉</a></td>
+							</tr>
+						</table>
+					</div>
+					
+					<div class="xieyi">
+						<table>
+							<tr class="neir">
+								<td><h4>协议声明</h4></td>
+							</tr>
+							<tr>
+								<td><a href="#">用户协议</a></td>
+								<td><a href="#">隐私政策</a></td>
+								<td><a href="#">历史版本</a></td>
+								<td><a href="#">知识产权声明</a></td>
+							</tr>
+						</table>
+					</div>
+				</div>
