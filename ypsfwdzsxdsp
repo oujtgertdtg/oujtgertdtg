@@ -1,0 +1,39 @@
+ </view>
+              </view>
+            </movable-view>
+          </movable-area>
+          <view class="delete-btn" data-id="{{item.id}}" bindtap="handleDeleteProduct" data-other="{{idx}}" data-index="{{indexProduct}}" data-cartid="{{ProItem.cartId}}">删除</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="cant-product">
+  <view class="cantTitle displayBox">因配送范围，库存原因等导致失效的商品</view>
+  <view class="productItem_new height{{index}}" wx:for="{{2}}">
+    <view class="cantProductLeft displayBox">
+      失效
+    </view>
+    <view class="rightProductInfo">
+      <view class="cart-productImg" style="background: url({{imgUrl}}/upload/20220608/ky.jpg);background-size: 100% 100%;">
+        <image src="{{imgUrl}}/upload/20220608/yyyy.png" class="cart-productImg" lazy-load="true"></image>
+      </view>
+      <view class="productInfoBox">
+        <view class="cart-productNameYY littleTwo">曾经好吃的烤鸭</view>
+        <view class="cart-productYyy little">抱歉，该商品已售罄或下架</view>
+        <view class="cart-productPrice">
+          <text class="priceSymbolYY">￥</text>
+          <text class="cart-priceYY">0</text>
+        </view>
+      </view>
+      <view class="cart-rightNumBox">
+      </view>
+    </view>
+  </view>
+  <view class="clearBox">
+    <view class="clear displayBox" bindtap="clearProduct">清空失效宝贝</view>
+    <view class="switchAddress displayBox" bindtap="switchAdd">切换地址</view>
+  </view>
+</view>
+<view class="maybeLike" wx:if="{{recommendProduct.length>0}}">
+  <image src="{{imgUrl}}/upload/20220608/2323-2.png" class="maybeLikePng"></image>
