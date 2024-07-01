@@ -1,0 +1,19 @@
+# 将字符串转换为整数
+number = int("123")
+print(number)  # 123
+ 
+# 将整数转换为字符串
+text = str(123)
+print(text)  # "123"
+ 
+# 创建一个包含0到4的列表
+numbers_list = list(range(5))
+print(numbers_list)  # [0, 1, 2, 3, 4]
+ 
+# 创建一个字典
+numbers_dict = dict(a=1, b=2)
+print(numbers_dict)  # {'a': 1, 'b': 2}
+ 
+# 创建一个集合（自动去重）
+unique_numbers = set([1, 2, 2, 3, 4])
+print(unique_numbers)  # {1, 2, 3, 4}
